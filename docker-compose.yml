@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+
+  code-react:
+    build: .
+    command: npm start
+    volumes:
+      - .:/code-react/
+    ports:
+      - "3001:3001"
