@@ -9,7 +9,7 @@ type BoxProps = {
 export function Box(item: BoxProps) {
 
     return (
-        <div className={`flex p-5  rounded gap-20 border border-zinc-100 bg-${item.color} text-white`} >
+        <div className={`flex p-5 rounded gap-20 border border-zinc-100 bg-${item.color} text-white`} >
             <div className="block">
                 <header className="block text-2xl font-medium">
                     {item.quant}

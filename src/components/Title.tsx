@@ -1,9 +1,13 @@
 type title = {
-    title: string
+    title: string,
+    icon?: string
 }
 
-export function Title({ title }: title) {
+export function Title({ icon, title }: title) {
     return (
-        <h6 className="text-2xl mt-5 mb-5">{title}</h6>
+        <h6 className="flex justify-between text-2xl mt-5 mb-5">
+            {title}
+            <span className="w-5 mx-2 block"><i className={`fa fa-${icon}`}></i></span>
+        </h6 >
     )
 }

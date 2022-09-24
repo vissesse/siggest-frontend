@@ -1,20 +1,26 @@
 //import { NavLink } from "react-router-dom"
 //import { formatDate, conteudoLiberado } from '../utils/utils'
 
+import { NavLink } from "react-router-dom"
+
 interface ItemProps {
     item_name: string,
     icon: string
+    hrf?: string,
+    active?:any
 }
 
 
-export function Item(item: ItemProps) {
+export function Item(item: ItemProps) { 
 
-
+    //{//({ isActive }) => "hover:underline nav-link" + (isActive ? " font-bold" : "nav-link")}
     return (
-        <a className="flex mx-6 w-auto hover:bg-zinc-100 hover:rounded hover:text-zinc-800" href="#">
+        <NavLink
+            className={({ isActive }) => "" + (isActive ? "active-link" : "nav-link")}
+            to={`${item.hrf}`}>
             <span className="w-5 mx-2 block"><i className={`fa fa-${item.icon}`}></i></span>
-            <span className="mx-2 block" >{item.item_name} </span>
-        </a>
+            <span className={`mx-2 block`} >{item.item_name}</span>
+        </NavLink>
     )
 }
 

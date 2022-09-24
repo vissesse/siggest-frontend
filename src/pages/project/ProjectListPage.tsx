@@ -12,7 +12,7 @@ export function ProjectListPage({ projectos }: IProjecto) {
 
     return (
         <div className="w-[60%] p-5 rounded-md block border border-zinc-600 bg-zinc-800">
-            <Title title={`Projectos em destaques`} />
+            <Title title={`Projectos`} />
             <ProjectList projectos={projectos} />
             <div className="justify-end">
                 <p className="font-semibold text-zinc-100 float-right p-2 underline">

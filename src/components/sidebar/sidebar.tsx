@@ -1,4 +1,5 @@
-import { Item } from "./item"; 
+import { NavLink } from "react-router-dom";
+import { Item } from "./item";
 
 export function SideBar() {
     return (
@@ -6,20 +7,21 @@ export function SideBar() {
             <span className="mx-7 mt-3 font-semibold">
                 MY PROFILE
             </span>
-                <Item icon="user" item_name="Sing in" />
+            <Item icon="user" item_name="Sing in" />
             <span className="block border-b border-zinc-500"></span>
-            
-            <span className="mx-7 font-semibold">COMMUNITY</span>
 
-            <Item icon="home" item_name="Home" />
-            <Item icon="mortar-board" item_name="Projectos" />
-            
-            <Item icon="laptop" item_name="projects" />
-            <Item icon="users" item_name="Docentes" />
-            <Item icon="check-square" item_name="Moderation" />
-            
+            <span className="mx-7 font-semibold">COMMUNITY</span>
+            <Item hrf={`/`} icon="home" item_name="Home" />
+
+            <Item hrf={`/project`} icon="mortar-board" item_name="Projectos" />
+
+            <Item hrf={`/project`}  icon="laptop" item_name="projects" />
+            <Item hrf={`/docente`} icon="users" item_name="Docentes" />
+            <Item hrf={``} icon="check-square" item_name="Moderation" />
+
             <span className="block border-b border-zinc-500"></span>
             <span className="mx-7 font-semibold">BETA TESTING</span>
+
             <Item icon="gears" item_name="Software" />
             <Item icon="compact-disc" item_name="ISO Images" />
             <Item icon="user-friends" item_name="Teams" />

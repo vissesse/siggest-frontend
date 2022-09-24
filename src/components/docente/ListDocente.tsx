@@ -1,30 +1,40 @@
-import { Docente } from "../../data/types"; 
-interface docente {
-    docentes: Docente[]
+import { NavLink } from "react-router-dom";
+import { Docente } from "../../data/types";
+import { Link } from "../Link";
+interface Idocente {
+    docentes: Docente[] 
+    destaque?: boolean
 }
 
 
-export function ListDocente({ docentes }: docente) {
+export function ListDocente({ docentes, destaque }: Idocente) {
     let i = 0;
     return (
         <table>
             <thead >
-                <th >nome</th>
-                <th >formacao</th>
-                <th >insituto</th>
-                <th >projectos</th>
-                <th >livros</th>
-                <th >idiomas</th>
+                <th >Nome</th>
+                <th >Formacao</th>
+                <th >Insituto</th>
+                <th >Projectos</th>
+                <th >Livros</th>
+                {destaque ?
+                    (<th >Mais</th>) : ``}
             </thead>
             <tbody >
                 {docentes.map(docente => (
-                    <tr className={i++ ? '' : `border-b border-red-900 font-bold`}>
-                        <td className="">{docente.nome}</td>
-                        <td className="">{docente.formacao}</td>
-                        <td className="">{docente.instituto}</td>
-                        <td className="">{docente.projectos}</td>
-                        <td className="">{docente.livros}</td>
-                        <td className="">{docente.idioma}</td>
+                    <tr key={`${docente.id}`}>
+                        <td>
+                            <NavLink to={destaque ? `/destaque/docente/${docente.id}` : `/docente/${docente.id}/`}
+                                className={({ isActive }) => "hover:underline" + (isActive ? " font-bold" : "")}
+                            >
+                                {docente.nome}
+                            </NavLink>
+                        </td>
+                        <td>{docente.formacao}</td>
+                        <td>{docente.instituto}</td>
+                        <td>{docente.projectos}</td>
+                        <td>{docente.livros}</td>
+                        {destaque ? (<td><Link name="mais" link={`/docente/${docente.id}/`} /></td>) : ``}
                     </tr>
                 ))}
             </tbody>

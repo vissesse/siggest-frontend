@@ -13,6 +13,13 @@ body{
     @apply font-bold text-lg pb-6 mb-6 border-b border-gray-500 block
 }
 
+.nav-link{
+    @apply flex mx-6 w-auto hover:bg-zinc-100 hover:rounded hover:text-zinc-800
+}
+.active-link{
+    @apply flex mx-6 w-auto rounded bg-zinc-100 text-zinc-800
+}
+
 table{
     @apply p-4 rounded-md block border border-red-400
 }
@@ -24,3 +31,12 @@ table thead{
 table th, td{
     @apply text-left p-2
 }
+
+hr{
+    @apply border-red-400
+ }
+
+table legend{
+    @apply font-bold;
+ 
+ }

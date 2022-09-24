@@ -5,7 +5,7 @@ export function Header() {
     return (
         <header
             className="flex justify-between p-5 border-b border-zinc-500  bg-zinc-800">
-            <NavLink to={`/`} className="flex">
+            <NavLink to={`/destaque/docente`} className="flex">
                 <span className="mx-1 block text-3xl" >
                     <i className="fa fa-s"></i></span>
                 <span className="text-3xl block" >IGGEST</span>
