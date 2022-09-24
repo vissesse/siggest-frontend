@@ -1,8 +1,9 @@
 import { Circle } from "../../components/Circle";
 import { Docentes, EmpDocente } from "../../data/data";
-import { useParams } from "react-router-dom"; 
+import { useParams } from "react-router-dom";
 import { DocenteDetailHeader } from "../../components/docente/Cabecalho";
 import { NotFoundEntity } from "../../components/NotFoudComponet";
+import { DocenteDadosPessoais } from "../../components/docente/DocenteFullDetail";
 
 type docenteDetaial = {
     docente: string
@@ -11,7 +12,7 @@ type docenteDetaial = {
     projectos: number
     artigos: number
     disciplinas: number
-    contacto?: string
+    contacto: string
 }
 export function DocenteDestaqueDetail() {
     const { id } = useParams()
@@ -27,11 +28,9 @@ export function DocenteDestaqueDetail() {
 
     return docente.id ? (
         < div className="w-[38%] p-5 rounded-md border border-zinc-600 bg-zinc-800 " >
-            <div className="flex gap-x-20">
-                <DocenteDetailHeader contacto={docente.contacto} formacao={docente.formacao} foto={docente.nome} instituto={docente.instituto} nome={docente.nome} />
-            </div>
+            <DocenteDetailHeader contacto={docente.contacto || '9xx xxx xxx'} formacao={docente.formacao} foto={docente.nome} instituto={docente.instituto} nome={docente.nome} />
             <hr className="border-b border-red-400" />
-            <div className="pt-16 flex gap-2">
+            <div className="pt-16 flex justify-between">
                 <Circle item="Projectos" value={`${docente.projectos}`} />
                 <Circle item="Artigos" value={`${docente.artigos}`} />
                 <Circle item="Disciplinas lecionadas" value={`${docente.disciplinas}`} />

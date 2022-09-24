@@ -11,21 +11,23 @@ export function Formacao() {
         <>
             <table>
                 <legend >Formacao Academica </legend>
-                <thead  className="flex">
-                    <th >Curso</th>
-                    <th className="">Instituição</th>
-                    <th className="">País</th>
-                    <th className="justify-end">Data</th>
-                    <th className="justify-items-end">Grau</th>
+                <thead >
+                    <tr>
+                        <th >Curso</th>
+                        <th className="">Instituição</th>
+                        <th className="">País</th>
+                        <th className="">Data</th>
+                        <th className="">Grau</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {formacaoAcademica.map(formacao => (
-                        <tr key={formacao.id}>
+                        <tr key={formacao.id} className="">
                             <td>{formacao.curso}</td>
                             <td className="">{formacao.instituicao}</td>
                             <td className="">{formacao.pais}</td>
-                            <td className="justify-end">{getData(formacao.data)}</td>
-                            <td className="justify-items-end">{formacao.grau}</td>
+                            <td className="">{getData(formacao.data)}</td>
+                            <td className="">{formacao.grau}</td>
                         </tr>
                     ))}
                 </tbody>

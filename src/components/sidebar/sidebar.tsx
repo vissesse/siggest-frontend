@@ -13,9 +13,7 @@ export function SideBar() {
             <span className="mx-7 font-semibold">COMMUNITY</span>
             <Item hrf={`/`} icon="home" item_name="Home" />
 
-            <Item hrf={`/project`} icon="mortar-board" item_name="Projectos" />
-
-            <Item hrf={`/project`}  icon="laptop" item_name="projects" />
+            <Item hrf={`/project/instic`} icon="mortar-board" item_name="Projectos" /> 
             <Item hrf={`/docente`} icon="users" item_name="Docentes" />
             <Item hrf={``} icon="check-square" item_name="Moderation" />
 

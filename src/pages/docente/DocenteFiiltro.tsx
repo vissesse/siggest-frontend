@@ -16,27 +16,27 @@ export function DocenteFiltro() {
                 <hr />
                 <div className="flex justify-between">
                     Artigos publicado
-                    <InPut name="artigos_Publicado" />
+                    <InPut type="number" name="artigos_Publicado" />
                 </div>
                 <hr />
                 <div className="flex justify-between">
                     Livros publicado
-                    <InPut name="livros_Publicado" />
+                    <InPut type="number" name="livros_Publicado" />
                 </div>
                 <hr />
                 <div className="flex justify-between">
                     Projectos mentorado
-                    <InPut name="projecto_mentorado" />
+                    <InPut type="number" name="projecto_mentorado" />
                 </div>
                 <hr />
                 <div className="flex justify-between">
                     Projectos Julgado
-                    <InPut name="projectos_julgado" />
+                    <InPut type="number" name="projectos_julgado" />
                 </div>
                 <hr />
                 <div className="flex justify-between">
                     Cadeiras ministrada
-                    <InPut name="cadeiras" />
+                    <InPut type="number" name="cadeiras" />
                 </div>
                 <div className="pt-8">
                     <BtnSubmit id="send" icon="search" name="procurar" w="full" />

@@ -9,14 +9,14 @@ interface IinPut {
 
 
 export function InPut({ type, placeHolder, name, id, w }: IinPut) {
-
+    const min = 20
     return (
         <input
             type={type ? `${type}` : `text`}
             placeholder={placeHolder}
             name={name}
             id={id}
-            className={`text-center bg-zinc-600 text-zinc-100 border rounded-md border-zinc-200 p-1 w-${w ? w : '20'}`}
+            className={`text-center bg-zinc-600 text-zinc-100 border rounded-md border-zinc-200 p-1 w-${w ? w : min}`}
         />
     )
 

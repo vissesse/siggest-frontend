@@ -10,9 +10,9 @@ interface Idocente {
 export function DadosPessoais({ docente }: Idocente) {
 
     return (<>
-        <div className="flex gap-x-20">
+        <div className="flex justify-between">
             <div>
-                <div className="font-bold">
+                <div className="flex flex-grow font-bold">
                     <Title title={`${docente.nome}`} />
                 </div>
                 <DocenteItem item={docente.nacionalidade} icon="globe" />
@@ -23,7 +23,7 @@ export function DadosPessoais({ docente }: Idocente) {
             <Foto nome={docente.nome} foto={docente.nome} />
         </div>
         <hr className="border-b border-red-400" />
-        <div className="pt-14 flex  justify-between gap-y-2">
+        <div className="pt-14 flex justify-between gap-y-2">
             <div className="item">
                 <DocenteItem item="Local de nascimento" icon="globe-africa" />
                 <DocenteItem item="Aniversário" icon="calendar" />
@@ -33,7 +33,7 @@ export function DadosPessoais({ docente }: Idocente) {
                 <DocenteItem item="email" icon="envelope" />
                 <DocenteItem item="conctacto" icon="phone" />
             </div>
-            <div className="info">
+            <div className="text-end">
                 <p>{`Luanda`}</p>
                 <p>{`20-12-190`}</p>
                 <p>{`Luanda, Luanda`}</p>

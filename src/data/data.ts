@@ -28,7 +28,7 @@ export const Docentes: Docente[] = [
         id: "1",
 
         contacto: "945083118",
-        nome: "Angolalast Joao name",
+        nome: "Angola last Joao name",
         genero: "Masculino",
         nacionalidade: "Angolana",
         estadoCivil: "Casado",
@@ -65,7 +65,7 @@ export const Docentes: Docente[] = [
 
         id: "112",
         genero: "Masculino",
-        nome: "Carlos Vissesse last Joao name",
+        nome: "Carlos Maorais last Joao name",
         nacionalidade: "Angolana",
         estadoCivil: "Casado",
         nIdentificacao: "0043382HO043",
@@ -82,7 +82,7 @@ export const Docentes: Docente[] = [
 
         id: "3",
         genero: "Masculino",
-        nome: "Carlos Vissesse last Joao name",
+        nome: "Carlos Vissesse Joao",
         nacionalidade: "Angolana",
         estadoCivil: "Casado",
         nIdentificacao: "0043382HO043",
@@ -99,7 +99,7 @@ export const Docentes: Docente[] = [
 
         id: "4",
         genero: "Masculino",
-        nome: "Carlos Vissesse last Joao name",
+        nome: "Carlos Vissesse",
         nacionalidade: "Angolana",
         estadoCivil: "Casado",
         nIdentificacao: "0043382HO043",
@@ -116,7 +116,7 @@ export const Docentes: Docente[] = [
 
         id: "5",
         genero: "Masculino",
-        nome: "Carlos Vissesse last Joao name",
+        nome: "Carla Joao name",
         nacionalidade: "Angolana",
         estadoCivil: "Casado",
         nIdentificacao: "0043382HO043",
@@ -133,7 +133,7 @@ export const Docentes: Docente[] = [
 
         id: "63",
         genero: "Masculino",
-        nome: "Carlos Vissesse last Joao name",
+        nome: "Vissesse Americo name",
         nacionalidade: "Angolana",
         estadoCivil: "Casado",
         nIdentificacao: "0043382HO043",
@@ -150,7 +150,7 @@ export const Docentes: Docente[] = [
 
         id: "36",
         genero: "Masculino",
-        nome: "Carlos Vissesse last Joao name",
+        nome: "Carlos Dos Santos",
         nacionalidade: "Angolana",
         estadoCivil: "Casado",
         nIdentificacao: "0043382HO043",
@@ -167,7 +167,7 @@ export const Docentes: Docente[] = [
 
         id: "6",
         genero: "Masculino",
-        nome: "Simão Carlos Vi last Joao namessesse",
+        nome: "Simão  namessesse",
         nacionalidade: "Angolana",
         estadoCivil: "Casado",
         nIdentificacao: "0043382HO043",
@@ -248,7 +248,7 @@ export const ProjectosData: Projecto[] = [
             email: "Autpr@gmail.com",
             telefone: "945083118"
         }],
-        status: 1,
+        status: STATUS.PORDEFENDER,
 
 
     },
@@ -271,7 +271,7 @@ export const ProjectosData: Projecto[] = [
             email: "Autpr@gmail.com",
             telefone: "945083118"
         }],
-        status: 2
+        status: STATUS.DEFENDIDO
 
     },
     {
@@ -293,7 +293,7 @@ export const ProjectosData: Projecto[] = [
             email: "Autpr@gmail.com",
             telefone: "945083118"
         }],
-        status: 3
+        status: STATUS.REPROVADO
 
     }
 

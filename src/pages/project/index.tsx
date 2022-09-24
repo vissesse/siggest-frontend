@@ -1,5 +1,5 @@
 
-import { Outlet, useParams } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { ProjectosData } from "../../data/data";
 import { Projecto, STATUS } from "../../data/types";
 import { ProjectListPage } from "./ProjectListPage";
@@ -30,8 +30,10 @@ function projectFilterBy(filter: number, projectos: Projecto[]) {
 }
 
 
-export function ProjectIndex() { 
-    const projectos = projectFilterBy(parseInt(`0${0}`), ProjectosData)
+export function ProjectIndex() {
+    const { search } = useLocation()
+    const filter = search.split("=")[1]
+    const projectos = projectFilterBy(parseInt(`0${filter ? filter : 0}`), ProjectosData)
 
     return (
         <>
